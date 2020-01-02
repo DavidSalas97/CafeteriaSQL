@@ -1,6 +1,5 @@
 host = "localhost"
 port = 5432
 user = "postgres"
-passwd="postgres"
-database = "restaurante"
-
+password="tienda123"
+database = "Tienda"
