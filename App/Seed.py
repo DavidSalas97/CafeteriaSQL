@@ -5,15 +5,15 @@ conn=psycopg2.connect("dbname=%s user=%s password=%s host=%s port=%s"%(database,
 cur = conn.cursor()
 
 sql ="""
-insert into Clientes (id_cliente, nombre, edad, celular, correo) 
+insert into Clientes (rut, nombre, edad, celular, correo) 
 values ('18549939 ','Juan ','20','96453584','falso321@hotmail.com');
-insert into Clientes (id_cliente, nombre, edad, celular, correo) 
+insert into Clientes (rut, nombre, edad, celular, correo) 
 values ('20654324 ','Gonzalo ','25','94135975','falso123@hotmail.com');
-insert into Clientes (id_cliente, nombre, edad, celular, correo) 
+insert into Clientes (rut, nombre, edad, celular, correo) 
 values ('24022365 ','Maria ','21','96519871','falso856@hotmail.com');
-insert into Clientes (id_cliente, nombre, edad, celular, correo) 
+insert into Clientes (rut, nombre, edad, celular, correo) 
 values ('19156701 ','Mario ','23','95417943','falso973@hotmail.com');
-insert into Clientes (id_cliente, nombre, edad, celular, correo) 
+insert into Clientes (rut, nombre, edad, celular, correo) 
 values ('23214975 ','Julieta ','19','93216547','falso751@hotmail.com');
 """
 cur.execute(sql)
@@ -36,6 +36,8 @@ insert into Ventas (id_venta, rut_cliente, id_tienda, fecha)
 values ('4','19156701','1','20191115');
 insert into Ventas (id_venta, rut_cliente, id_tienda, fecha) 
 values ('5','23214975','1','20191201');
+insert into Ventas (id_venta, rut_cliente, id_tienda, fecha) 
+values ('6','23214975','1','20191201');
 """
 cur.execute(sql)
 
@@ -83,7 +85,7 @@ values ('8','8','3');
 insert into Inventario (id_inventario,id_producto, stock_actual)
 values ('9','9','30');
 insert into Inventario (id_inventario,id_producto, stock_actual)
-values ('10','10','4');
+values ('10','10','0');
 """
 cur.execute(sql)
 
@@ -130,6 +132,8 @@ insert into Compone (id_producto, id_venta, cantidad, monto)
 values ('1','4','1','1500');
 insert into Compone (id_producto, id_venta, cantidad, monto) 
 values ('10','5','5','12500');
+insert into Compone (id_producto, id_venta, cantidad, monto) 
+values ('8','6','5','12750');
 """
 cur.execute(sql)
 

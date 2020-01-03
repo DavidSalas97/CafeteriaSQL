@@ -10,7 +10,7 @@ cur.execute(sql)
 
 sql ="""
 CREATE TABLE Clientes
-(id_cliente serial PRIMARY KEY, 
+(rut serial PRIMARY KEY, 
 nombre varchar(255), 
 edad int,
 celular int,
@@ -49,7 +49,7 @@ cur.execute(sql)
 sql = """
 CREATE TABLE Ventas
 (id_venta serial PRIMARY KEY,
-rut_cliente varchar(40) ,
+rut_cliente int,
 id_tienda int,
 fecha date);
 """
